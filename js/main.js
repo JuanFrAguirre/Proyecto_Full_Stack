@@ -154,10 +154,14 @@
   }); // DOM Content Loaded
 })();
 
+// jQuery-----------------------------------------
+
 $(function () {
   "use strict";
 
-  //Programa de Conferencias
+  // -----------------------------------------
+  //    Programa de Conferencias
+
   $(".programa-evento .info-curso:first").show();
   $(".menu-programa a:first").addClass("activo");
 
@@ -169,5 +173,23 @@ $(function () {
     $(enlace).fadeIn(700);
 
     return false;
+  });
+
+  // -----------------------------------------
+  //    Animaciones para los Numeros
+
+  $(".resumen-evento li:nth-child(1) p").animateNumber({ number: 6 }, 2000);
+  $(".resumen-evento li:nth-child(2) p").animateNumber({ number: 15 }, 2000);
+  $(".resumen-evento li:nth-child(3) p").animateNumber({ number: 3 }, 2000);
+  $(".resumen-evento li:nth-child(4) p").animateNumber({ number: 9 }, 2000);
+
+  // -----------------------------------------
+  //    Animaciones Countdown
+
+  $(".cuenta-regresiva").countdown("2020/12/10 09:00:00", function (e) {
+    $("#dias").html(e.strftime("%-D"));
+    $("#horas").html(e.strftime("%-H"));
+    $("#minutos").html(e.strftime("%-M"));
+    $("#segundos").html(e.strftime("%-S"));
   });
 });
