@@ -901,7 +901,6 @@ ul {
 
 #mapa {
   height: 42rem;
-  background-color: green;
 }
 
 .testimoniales {
@@ -1286,28 +1285,11 @@ h4 {
 .eventos .caja .contenido-dia {
   padding: 2rem;
   text-align: left;
+  display: none;
 }
 
 .eventos .caja .contenido-dia h4 {
   width: 100%;
-}
-
-@media (min-width: 768px) {
-  .eventos .caja .contenido-dia {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
 }
 
 .eventos .caja .contenido-dia .contenedor-talleres {
@@ -1422,56 +1404,66 @@ h4 {
 
 .caja-resumen .extras {
   padding: 3rem;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
-@media (min-width: 768px) {
-  .caja-resumen .extras {
-    -ms-flex-preferred-size: 60%;
-        flex-basis: 60%;
-  }
-}
-
-.caja-resumen .extras .orden {
+.caja-resumen .orden {
   text-align: center;
   margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-  .caja-resumen .extras .orden {
+  .caja-resumen .orden {
     -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
   }
 }
 
-.caja-resumen .extras .orden input {
+.caja-resumen .orden input {
   margin: 1rem 0 0 0;
 }
 
-.caja-resumen .total {
+.total {
   padding: 3rem;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
 }
 
-@media (min-width: 768px) {
-  .caja-resumen .total {
-    margin-right: 5rem;
-  }
-}
-
-.caja-resumen input {
+.total input {
   margin: 3rem auto 1rem;
 }
 
 @media (min-width: 768px) {
-  .caja-resumen input {
+  .total input {
     text-align: center;
     max-width: 20rem;
   }
 }
 
 @media (min-width: 768px) {
-  .caja-resumen select {
+  .total select {
     text-align: center;
   }
+}
+
+#lista-productos {
+  background-color: #e1e1e1;
+  padding: 2rem;
+  display: none;
+}
+
+#suma-total {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fe4918;
+}
+
+#error {
+  padding: 1rem;
+  max-width: 30%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* ==========================================================================
