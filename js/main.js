@@ -153,3 +153,21 @@
     // FIN CUERPO JS -----------------------------------------
   }); // DOM Content Loaded
 })();
+
+$(function () {
+  "use strict";
+
+  //Programa de Conferencias
+  $(".programa-evento .info-curso:first").show();
+  $(".menu-programa a:first").addClass("activo");
+
+  $(".menu-programa a").on("click", function () {
+    $(".menu-programa a").removeClass("activo");
+    $(this).addClass("activo");
+    $(".ocultar").hide();
+    let enlace = $(this).attr("href");
+    $(enlace).fadeIn(700);
+
+    return false;
+  });
+});
