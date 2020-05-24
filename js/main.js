@@ -160,6 +160,11 @@ $(function () {
   "use strict";
 
   // -----------------------------------------
+  //    Lettering
+
+  $(".nombre-sitio").lettering();
+
+  // -----------------------------------------
   //    Programa de Conferencias
 
   $(".programa-evento .info-curso:first").show();
@@ -168,9 +173,9 @@ $(function () {
   $(".menu-programa a").on("click", function () {
     $(".menu-programa a").removeClass("activo");
     $(this).addClass("activo");
-    $(".ocultar").hide();
+    $(".ocultar").fadeOut(500);
     let enlace = $(this).attr("href");
-    $(enlace).fadeIn(700);
+    $(enlace).fadeIn(1000);
 
     return false;
   });
